@@ -1,0 +1,60 @@
+Script started on 2025-02-01 03:08:01+00:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="116" LINES="39"]
+]0;lisayu198@instance-20250127-191841: ~/cs131[01;32mlisayu198@instance-20250127-191841[00m:[01;34m~/cs131[00m$ mkdir ws2  #Make ws2 directory
+]0;lisayu198@instance-20250127-191841: ~/cs131[01;32mlisayu198@instance-20250127-191841[00m:[01;34m~/cs131[00m$ cd ws2  #Change directory to ws2
+]0;lisayu198@instance-20250127-191841: ~/cs131/ws2[01;32mlisayu198@instance-20250127-191841[00m:[01;34m~/cs131/ws2[00m$ echo $HOME  #Display home directory path
+/home/lisayu198
+]0;lisayu198@instance-20250127-191841: ~/cs131/ws2[01;32mlisayu198@instance-20250127-191841[00m:[01;34m~/cs131/ws2[00m$ id  #Shows the user ID (uid=1001), group ID (gid=1002), and all groups the user belongs to
+uid=1001(lisayu198) gid=1002(lisayu198) groups=1002(lisayu198),4(adm),20(dialout),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),118(netdev),119(lxd),1000(ubuntu),1001(google-sudoers)
+]0;lisayu198@instance-20250127-191841: ~/cs131/ws2[01;32mlisayu198@instance-20250127-191841[00m:[01;34m~/cs131/ws2[00m$ ls /proc/ | grep mem  #Lists files in /proc/ containing "mem", revealing "meminfo" for memory information
+io[01;31m[Kmem[m[K
+[01;31m[Kmem[m[Kinfo
+]0;lisayu198@instance-20250127-191841: ~/cs131/ws2[01;32mlisayu198@instance-20250127-191841[00m:[01;34m~/cs131/ws2[00m$ ls /proc/ | grep cpu  #Lists files in /proc/ containing "cpu", revealing "cpuinfo" for CPU information
+[01;31m[Kcpu[m[Kinfo
+]0;lisayu198@instance-20250127-191841: ~/cs131/ws2[01;32mlisayu198@instance-20250127-191841[00m:[01;34m~/cs131/ws2[00m$ head -n 1 /proc/meminfo  #Displays the first line of /proc/meminfo, showing total memory as 976904 kB
+MemTotal:         976904 kB
+]0;lisayu198@instance-20250127-191841: ~/cs131/ws2[01;32mlisayu198@instance-20250127-191841[00m:[01;34m~/cs131/ws2[00m$ head /proc/cpuinfo  #Shows the first 10 lines of CPU info, including processor number, vendor, and model
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU @ 2.20GHz
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 2199.998
+cache size	: 56320 KB
+physical id	: 0
+]0;lisayu198@instance-20250127-191841: ~/cs131/ws2[01;32mlisayu198@instance-20250127-191841[00m:[01;34m~/cs131/ws2[00m$ tail /proc/cpuinfo  #Displays the last 10 lines of CPU info, including CPU flags and cache information
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa mmio_stale_data retbleed bhi
+bogomips	: 4399.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+]0;lisayu198@instance-20250127-191841: ~/cs131/ws2[01;32mlisayu198@instance-20250127-191841[00m:[01;34m~/cs131/ws2[00m$ cat /proc/cpuinfo | grep "model name"  #Extracts the CPU model name: Intel(R) Xeon(R) CPU @ 2.20GHz
+[01;31m[Kmodel name[m[K	: Intel(R) Xeon(R) CPU @ 2.20GHz
+[01;31m[Kmodel name[m[K	: Intel(R) Xeon(R) CPU @ 2.20GHz
+]0;lisayu198@instance-20250127-191841: ~/cs131/ws2[01;32mlisayu198@instance-20250127-191841[00m:[01;34m~/cs131/ws2[00m$ cat /proc/cpuinfo | grep "cpu MHz"  #Shows the CPU speed: 2199.998 MHz
+[01;31m[Kcpu MHz[m[K		: 2199.998
+[01;31m[Kcpu MHz[m[K		: 2199.998
+]0;lisayu198@instance-20250127-191841: ~/cs131/ws2[01;32mlisayu198@instance-20250127-191841[00m:[01;34m~/cs131/ws2[00m$ cat /etc/os-release  #Displays OS information, showing it's Ubuntu 20.04.6 LTS (Focal Fossa)
+NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+]0;lisayu198@instance-20250127-191841: ~/cs131/ws2[01;32mlisayu198@instance-20250127-191841[00m:[01;34m~/cs131/ws2[00m$ history > cmds,l[K[K,[K.lg[Kog
+]0;lisayu198@instance-20250127-191841: ~/cs131/ws2[01;32mlisayu198@instance-20250127-191841[00m:[01;34m~/cs131/ws2[00m$ exit
+exit
+
+Script done on 2025-02-01 03:12:00+00:00 [COMMAND_EXIT_CODE="0"]

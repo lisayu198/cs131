@@ -1,0 +1,16 @@
+    1  exit
+    2  mkdir ws2
+    3  cd ws2
+    4  echo $HOME
+    5  id
+    6  ls /proc/ | grep mem
+    7  ls /proc/ | grep cpu
+    8  head -n 1 /proc/meminfo
+    9  head /proc/cpuinfo
+   10  tail /proc/cpuinfo
+   11  cat /proc/cpuinfo | grep 
+   12  cat /proc/cpuinfo | grep "model name"
+   13  cat /proc/cpuinfo | grep "cpuMHz"
+   14  cat /proc/cpuinfo | grep "cpu MHz"
+   15  cat /etc/os-release
+   16  exit

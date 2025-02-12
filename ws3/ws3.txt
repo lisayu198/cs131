@@ -1,0 +1,11 @@
+# Task 1: Display the top 3 locations for January 2nd, 2019
+# Shows the most frequent pickup location IDs(pulocationid) and their occurence counts
+# The number on the left is the occurence count and the right is the pickup location number
+   8605 161.0
+   8407 132.0
+   8163 186.0
+# Task 2: Display the top 3 pickup locations for January 10th, 2019
+# Same as above, where left is occurence count and right is the pickup locatin number
+  13738 237.0
+  13519 236.0
+  12997 161.0

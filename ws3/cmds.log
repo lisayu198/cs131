@@ -1,0 +1,15 @@
+    1  sudo apt install python3-pip  
+    2  pip install gdown --user
+    3  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3
+    4  /home/$lisayu198/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3
+    5  mkdir ws3
+    6  cd ws3
+    7  grep "2019-01-02" 2019-01-h1.csv > jan_2_data.csv
+    8  cut -d',' -f8 jan_2_data.csv > jan_2_pulocationids.txt
+    9  sort jan_2_pulocationids.txt | uniq -c | sort -nr | head -n 3 > top3_jan_2.txt
+    10 cat top3_jan_2.txt >> ws3.txt
+    11 grep "2019-01-10" 2019-01-h1.csv > jan_10_data.csv
+    12 cut -d',' -f8 jan_10_data.csv > jan_10_pulocationids.txt
+    13 sort jan_10_pulocationids.txt | uniq -c | sort -nr | head -n 3 > top3_jan_10.txt
+    14 cat top3_jan_10.txt >> ws3.txt
+    15 history > cmds.log

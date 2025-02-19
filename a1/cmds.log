@@ -1,0 +1,23 @@
+    1  A1
+    2  mkdir ~/cs131/a1
+    3  cd ~/cs131/a1
+    4  nano ~/.bashrc
+    5  alias l='ls -ltr'
+    6  alias w='ls -l | wc'
+    7  source ~/.bashrc
+    8  l
+    9  w
+   10  mkdir FARE
+   11  grep ",151.0," 2019-01-h1.csv | grep ",239.0," | cut -d ',' -f 4 > FARE/151.0-239.0.txt
+   12  grep ",48.0," 2019-01-h1.csv | grep ",161.0," | cut -d ',' -f 4 > FARE/48.0-161.0.txt
+   19  total=$(paste -sd+ FARE/151.0-239.0.txt  | bc)
+   20  count=$(wc -l < FARE/151.0-239.0.txt)
+   21  mean=$(echo "scale=2; $total / $count" | bc)
+   22  echo "Mean fare for 151.0-239.0: $mean" >> a1.txt
+   23  total=$(paste -sd+ FARE/48.0-161.0.txt | bc)
+   24  count=$(wc -l < FARE/48.0-161.0.txt)
+   25  mean=$(echo "scale=2; $total / $count" | bc)
+   26  echo "Mean fare for 48.0-161.0: $mean" >> a1.txt
+   27  head -n 1 2019-01-h1.csv | tr ',' '\n' | nl
+   28  grep '"2019-01-10' 2019-01-h1.csv | cut -d',' -f17 | sort -nr | head -n 1 >> a1.txt
+   29  grep -E '^[^,]*,[^,]*,[^,]*,[3-9]' 2019-01-h1.csv | cut -d',' -f9 | sort | uniq -c | sort -nr | head -10 >> a1.txt

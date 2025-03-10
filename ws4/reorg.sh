@@ -1,29 +1,30 @@
 #!/bin/bash
 
-# Define the vendor IDs and corresponding file suffixes
-VENDOR_IDS=(1.0 2.0 4.0)
+# Set PATH (optional, depending on your environment)
+export PATH=~/bin:"$PATH"
 
-# Get the current date and time
+# Define the dataset file
+DATASET=~/cs131/2019-01-h1.csv
+
+# Get current date and time
 DATE_TIME=$(date "+%F-%T")
 
-# Reorganize the data into separate files for each vendor ID
-for VENDOR_ID in "${VENDOR_IDS[@]}"; do
-    # Create the filename based on the date/time and vendor ID
-    FILENAME="${DATE_TIME}-${VENDOR_ID}.csv"
-    
-    # Use awk to filter the data for the current vendor ID
-    awk -v vendor_id="${VENDOR_ID}" '$1 == vendor_id {print $0}' 2019-01-h1.csv > "${FILENAME}"
-    
-    # Add the file to .gitignore
-    echo "${FILENAME}" >> .gitignore
+# Reorganize the 2019 taxi dataset by vendorid
+sed -n '/^1.0,/p' "$DATASET" > "${DATE_TIME}-1.0.csv"
+sed -n '/^2.0,/p' "$DATASET" > "${DATE_TIME}-2.0.csv"
+sed -n '/^4.0,/p' "$DATASET" > "${DATE_TIME}-4.0.csv"
+
+# Add above files to .gitignore
+for i in *.csv; do
+    echo "ws4/$i" >> ../.gitignore
 done
 
-# Create a file "ws4.txt" with the word count results for each CSV file
-for VENDOR_ID in "${VENDOR_IDS[@]}"; do
-    FILENAME="${DATE_TIME}-${VENDOR_ID}.csv"
-    wc "${FILENAME}" >> ws4.txt
+# Add word count of each file to ws4.txt
+touch ws4.txt
+for i in *.csv; do
+    wc "$i" >> ws4.txt
 done
 
-# Append the contents of .gitignore to ws4.txt
-cat .gitignore >> ws4.txt
+# Append contents of .gitignore to ws4.txt
+cat ../.gitignore >> ws4.txt
 

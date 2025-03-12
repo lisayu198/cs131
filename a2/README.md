@@ -58,4 +58,15 @@ This script is ideal for users who want a quick way to protect themselves agains
     ```
     Restored 'file1.txt'.
     ```
+    
+4. **Empty trash situation**
+   
+   ```bash
+   ./safedelete.sh --undo
+   ```
 
+   Output:
+
+   ```bash
+   Trash is empty
+   ```

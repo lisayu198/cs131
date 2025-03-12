@@ -1,4 +1,4 @@
-# safedelete.sh - Simplified Trash Utility with Single-File Undo
+# safedelete.sh -  Trash Utility with Single-File Undo
 
 ## What it does
 
@@ -11,7 +11,7 @@ This script is ideal for users who want a quick way to protect themselves agains
 ## How to use this command
 
 0.  **Usage**
-    *   './safedelete.sh'
+    *   `./safedelete.sh`: Shows usage instructions
     
     Output:
 

@@ -10,6 +10,13 @@ This script is ideal for users who want a quick way to protect themselves agains
 
 ## How to use this command
 
+0.  **Usage**
+    *   './safedelete.sh'
+    
+    Output:
+
+    Usage: safedelete.sh <file(s)> | safedelete.sh --undo
+
 1.  **"Deleting" Files:**
     *   `./safedelete.sh <file1> <file2> ...`: Moves the specified files to the `~/.trash` directory.
 

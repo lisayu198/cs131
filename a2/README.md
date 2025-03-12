@@ -2,11 +2,11 @@
 
 ## What it does
 
-`safedelete.sh` provides a simplified method for "deleting" files by moving them to the `~/.trash` directory. The key feature of this version is a simplified `--undo` option that restores only the *most recently* deleted file.
+`safedelete.sh` provides a safe method for "deleting" files by moving them to the `~/.trash` directory. The key feature of this version is an `--undo` option that restores only the *most recently* deleted file.
 
 ## Why/When this command is useful
 
-This script is ideal for users who want a quick way to protect themselves against accidental deletions and who primarily need to restore only the last file they deleted. If you often find yourself deleting a file and immediately realizing you need it back, this tool can be helpful.
+This script is ideal for users who want a quick way to protect themselves against accidental deletions and who primarily need to restore only the last file they deleted. It you often find yourself deleting a file and immediately realizing you need it back, this tool can be helpful.
 
 ## How to use this command
 

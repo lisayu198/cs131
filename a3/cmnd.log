@@ -1,0 +1,13 @@
+    1  mkdir a3
+    2  cd a3
+    3  vim grades.csv
+    4  cat grades.csv
+    5  vim grader.awk
+    6  awk -f grader.awk grades.csv
+    7  vim grader.awk
+    8  awk -f grader.awk grades.csv
+    9  vim grader.awk
+    10  awk -f grader.awk grades.csv
+    11  awk -f grader.awk grades.csv > a3.txt
+    12  ls
+    13  cat a3.txt  

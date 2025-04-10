@@ -1,0 +1,15 @@
+Results:
+David  Total: 195 , Average: 65 , Status: Fail 
+
+Eve  Total: 265 , Average: 88.3333 , Status: Pass 
+
+Bob  Total: 246 , Average: 82 , Status: Pass 
+
+Charlie  Total: 270 , Average: 90 , Status: Pass 
+
+Alice  Total: 253 , Average: 84.3333 , Status: Pass 
+
+
+Top Scoring Student:  Charlie  with  270  points. 
+
+Lowest Scoring Student:  David  with  195 points. 
